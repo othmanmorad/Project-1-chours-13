@@ -50,6 +50,7 @@ int main()
 	cout << "\nLinked List Contenet After Delete Last Node : \n";
 	MydblLinkedList.PrintList();
 	cout << endl;
+	cout << "\n";
 
 }
 
