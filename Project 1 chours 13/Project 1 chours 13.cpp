@@ -52,5 +52,8 @@ int main()
 	cout << endl;
 	cout << "\n";
 
+	cout<<"Linked List Size By counter : " << MydblLinkedList.SizeByCounter();
+	cout << "\nLinked List Size By Loop : " << MydblLinkedList.Size() << endl;
+
 }
 
