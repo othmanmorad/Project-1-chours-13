@@ -5,7 +5,7 @@ template <class T>
 class clsDblLinkedList
 {
 protected: 
-	int _size = 0;
+	int _Size = 0;
 public :
 
 	class Node
@@ -79,7 +79,7 @@ public :
 		head = newNode;
 
 		// Increment Size
-		_size++;
+		_Size++;
 
 	}
 
@@ -106,7 +106,7 @@ public :
 		current->Next = newNode;
 
 		// Increment Size
-		_size++;
+		_Size++;
 
 	}
 
@@ -145,7 +145,7 @@ public :
 		}
 
 		// Increment Size
-		_size++;
+		_Size++;
 	}
 
 
@@ -181,7 +181,7 @@ public :
 		delete NodeToDelete;
 
 		// Decrement Size
-		_size--;
+		_Size--;
 	}
 
 	// Delete First Node
@@ -212,7 +212,7 @@ public :
 		
 
 			// Decrement Size
-			_size--;
+			_Size--;
 	}
 
 
@@ -251,11 +251,14 @@ public :
 			delete LastNodeToDelete;
 
 			// Decrement Size
-			_size--;
+			_Size--;
 		
 	}
 
 	
+	// Size By Counter
+	// This Function Loops Through the List and Counts the Number of Nodes
+	// This is a Simple Way to Get the Size of the List but it is not Efficient as it takes O(n) Time Complexity
      int SizeByCounter()
 	{
 		int Count = 0;	
@@ -273,10 +276,29 @@ public :
 		
 	}
 
+	 // Size
+	 // This Function Returns the Size of the List by Using a Counter that is Updated Whenever a Node is Added or Deleted
+	 // This is a More Efficient Way to Get the Size of the List as it takes O(1) Time Complexity
 	 int Size()
 	 {
-		 return _size;
+		 return _Size;
 	 }
 
+	 // Is Empty
+	 // This Function Checks if the List is Empty by Checking if the Head is NULL
+	 // This is a Simple Way to Check if the List is Empty
+	 // This Function takes O(1) Time Complexity
+	 bool IsEmptyByHead()
+	 {
+		 return head == NULL;
+	 }
+
+	 // Is Empty By Size
+	 // This Function Checks if the List is Empty by Checking if the Size is 0
+	 // This is a More Efficient Way to Check if the List is Empty as it takes O(1) Time Complexity
+	 bool IsEmpty()
+	 {
+		 return (_Size == 0 ? true : false);
+	 }
 };
 

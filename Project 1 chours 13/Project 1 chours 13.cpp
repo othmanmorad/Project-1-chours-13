@@ -8,6 +8,15 @@ int main()
 
 	clsDblLinkedList<int> MydblLinkedList;
 
+	if (MydblLinkedList.IsEmpty())
+	{
+		cout << "\nLinked List is Empty\n";
+	}
+	else
+	{
+		cout << "\nLinked List is Not Empty\n";
+	}
+
 	MydblLinkedList.InsertAtBiginning(5);
 	MydblLinkedList.InsertAtBiginning(4);
 	MydblLinkedList.InsertAtBiginning(3);
@@ -55,5 +64,14 @@ int main()
 	cout<<"Linked List Size By counter : " << MydblLinkedList.SizeByCounter();
 	cout << "\nLinked List Size By Loop : " << MydblLinkedList.Size() << endl;
 
+
+	if (MydblLinkedList.IsEmpty())
+	{
+		cout << "\nLinked List is Empty\n";
+	}
+	else
+	{
+		cout << "\nLinked List is Not Empty\n";
+	}
 }
 
