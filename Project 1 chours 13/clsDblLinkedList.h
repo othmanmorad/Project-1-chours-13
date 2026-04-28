@@ -300,5 +300,34 @@ public :
 	 {
 		 return (_Size == 0 ? true : false);
 	 }
+
+	 // Clear By Loop
+	 // This Function Clears the List by Looping Through the List and Deleting Each Node
+	 // This is a Simple Way to Clear the List but it is not Efficient as it takes O(n) Time Complexity
+	 // This Function also Sets the Head to NULL and Size to 0 after Clearing the List
+	 void ClearByLoop()
+	 {
+		 Node* current = head;
+		 while (current != NULL)
+		 {
+			 Node* NodeToDelete = current;
+			 current = current->Next;
+			 delete NodeToDelete;
+			 _Size--;
+		 }
+		 head = NULL;
+		 _Size = 0;
+	 }
+
+	 // Clear
+	 // This Function Clears the List by Setting the Head to NULL and Size to 0
+	 // This is Uses DeleteFirstNode repeatedly Clear the List as it takes O(n) Time Complexity
+	 void Clear()
+	 {
+		 while (_Size > 0)
+		 {
+			 DeleteFirstNode();
+		 }
+	 }
 };
 

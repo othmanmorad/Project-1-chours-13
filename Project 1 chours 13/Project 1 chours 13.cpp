@@ -73,5 +73,14 @@ int main()
 	{
 		cout << "\nLinked List is Not Empty\n";
 	}
+
+
+	cout << "\nLinked List size Before Clear: \n";
+	cout << MydblLinkedList.Size() << endl;
+
+
+	MydblLinkedList.Clear();
+	cout << "\nLinked List size After Clear: \n";
+	cout << MydblLinkedList.Size() << endl;
 }
 
