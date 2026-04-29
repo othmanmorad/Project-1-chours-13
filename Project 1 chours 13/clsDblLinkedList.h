@@ -329,5 +329,31 @@ public :
 			 DeleteFirstNode();
 		 }
 	 }
+
+	 // Reverse
+	 void Reverse()
+	 {
+		 // Current Node is the Node we are Currently at in the List
+		 Node* current = head;
+
+		 // Temp Node is a Temporary Node that we will Use to Store the Previous Node while Reversing the List
+		 Node* temp = nullptr;
+
+		 // Loop Until End of List
+		 while (current != nullptr)
+		 {
+			 // Swap Next and Previous Pointers of Current Node
+			 temp = current->Previous;
+			 current->Previous = current->Next;
+			 current->Next = temp;
+			 current = current->Previous;
+		 }
+		 // After Reversing the List, Temp Node will be at the Last Node of the Original List which is the New Head of the Reversed List
+		 if (temp != nullptr)
+		 {
+			 head = temp->Previous;
+		 }
+
+	 }
 };
 

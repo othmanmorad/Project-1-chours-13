@@ -59,7 +59,12 @@ int main()
 	cout << "\nLinked List Contenet After Delete Last Node : \n";
 	MydblLinkedList.PrintList();
 	cout << endl;
-	cout << "\n";
+
+
+	MydblLinkedList.Reverse();
+	cout << "\nLinked List After Reverse: \n";
+	MydblLinkedList.PrintList();
+
 
 	cout<<"Linked List Size By counter : " << MydblLinkedList.SizeByCounter();
 	cout << "\nLinked List Size By Loop : " << MydblLinkedList.Size() << endl;
@@ -78,9 +83,15 @@ int main()
 	cout << "\nLinked List size Before Clear: \n";
 	cout << MydblLinkedList.Size() << endl;
 
+	
+
+
 
 	MydblLinkedList.Clear();
 	cout << "\nLinked List size After Clear: \n";
 	cout << MydblLinkedList.Size() << endl;
+
+
+	
 }
 
