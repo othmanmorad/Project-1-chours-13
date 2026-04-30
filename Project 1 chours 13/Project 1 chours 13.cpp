@@ -48,10 +48,14 @@ int main()
 	 MydblLinkedList.PrintList();
 
 
+
 	MydblLinkedList.InsertAfter(N1, 25);
 	cout << "\nLinked List Contenet After Inserting 25 After 2: \n";
 	MydblLinkedList.PrintList();
 
+	MydblLinkedList.InsertAfterIndex(2, 250);
+	cout << "\nLinked List Contenet After Inserting 250 After Iteam(2): \n";
+	MydblLinkedList.PrintList();
 
 
 	MydblLinkedList.InsertAtEnd(50);

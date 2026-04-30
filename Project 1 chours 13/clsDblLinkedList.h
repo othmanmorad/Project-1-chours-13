@@ -439,12 +439,12 @@ public :
 	 }
 
 
-	 bool UpdateItem(int Index, int value)
+	 bool UpdateItem(int Index, int NewValue)
 	 {
 		 Node* ItemNode = GetNode(Index);
 		 if (ItemNode != NULL)
 		 {
-			 ItemNode->Value = value;
+			 ItemNode->Value = NewValue;
 			 return true;
 		 }
 		 else
@@ -452,6 +452,21 @@ public :
 			 return false;
 		 }
 		 
+	 }
+
+	 bool InsertAfterIndex(int Index, T Value)
+	 {
+		 Node* IteamNode = GetNode(Index);
+		 if (IteamNode != NULL)
+		 {
+			 InsertAfter(IteamNode, Value);
+			 return true;
+		 }
+		 else
+		 {
+			 return false;
+		 }
+		
 	 }
 };
 
