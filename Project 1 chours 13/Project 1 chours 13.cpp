@@ -35,6 +35,19 @@ int main()
 		cout << "\nNode Not Found\n";
 	}
 
+	clsDblLinkedList<int>::Node* N2 = MydblLinkedList.GetNode(2);
+	cout << "\nNode value is: " << N2->Value << endl;
+
+	clsDblLinkedList<int>::Node* N3 = MydblLinkedList.Find(7);
+	cout << "\nNode index is : " << MydblLinkedList.GetNodeIndex(N3) << endl;
+
+	cout << "\nIteam(3) Value is : " << MydblLinkedList.GetItem(3) << endl;
+
+	 MydblLinkedList.UpdateItem(3,500) ;
+	 cout << "\nLinked List Contenet After Update Item(3) To 500: \n";
+	 MydblLinkedList.PrintList();
+
+
 	MydblLinkedList.InsertAfter(N1, 25);
 	cout << "\nLinked List Contenet After Inserting 25 After 2: \n";
 	MydblLinkedList.PrintList();
@@ -61,9 +74,13 @@ int main()
 	cout << endl;
 
 
+
 	MydblLinkedList.Reverse();
 	cout << "\nLinked List After Reverse: \n";
 	MydblLinkedList.PrintList();
+
+
+	
 
 
 	cout<<"Linked List Size By counter : " << MydblLinkedList.SizeByCounter();
@@ -84,7 +101,7 @@ int main()
 	cout << MydblLinkedList.Size() << endl;
 
 	
-
+	
 
 
 	MydblLinkedList.Clear();

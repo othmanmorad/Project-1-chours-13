@@ -355,5 +355,103 @@ public :
 		 }
 
 	 }
+
+
+	 // Get Node
+	 Node* GetNode(int Index)
+	 {
+		 // If List is Empty
+		 int Counter = 0;
+		 
+		 Node* current = head;
+		 // Check if Index is Valid
+		 if (Index > _Size - 1 || Index < 0)
+		 {
+			 return NULL;
+		 }
+		 // Loop Until End of List or Index is Found
+		 while (current != NULL && (current->Next != NULL))
+		 {
+			 // Check if Index is Found
+			 if(Counter==Index)
+			 {
+				 // Return Current Node
+				 break;
+
+			 }
+			 // Move to Next Node
+			 current = current->Next;
+			 // Increment Counter
+			 Counter++;
+		 }
+		 // Return Current Node
+		 return current;
+	 }
+
+	 // Get Item
+	 T GetItem(int Index)
+	 {
+		 // Get Node at Index
+		 Node* ItemNode = GetNode(Index);
+		 // Check if Node is NULL
+		 if (ItemNode == NULL)
+		 {
+			 return NULL ;
+		 }
+		 // Return Value of Node
+		 else 
+		 {
+			 
+			 return ItemNode->Value;
+		 }
+		
+	 }
+
+	 // Get Index
+	 T GetNodeIndex(Node* NodeToFind)
+	 {
+		 // Check if Node is NULL
+		 if (NodeToFind == NULL)
+		 {
+			 // If Node is NULL, Return -1 to Indicate that the Node was Not Found in the List
+			 return -1;
+		 }
+		 // Loop Through the List and Count the Number of Nodes Until We Find the Node to Find
+		 int Counter = 0;
+		 // Start from Head
+		 Node* current = head;
+		 // Loop Until End of List or Node to Find is Found
+		 while (current != NULL)
+		 {
+			 // Check if Node to Find is Found
+			 if (current == NodeToFind)
+			 {
+				 break;
+			 }
+			 // Move to Next Node
+			 current = current->Next;
+			 // Increment Counter
+			 Counter++;
+
+		 }
+		 // Return Counter which is the Index of the Node to Find in the List
+		 return Counter;
+	 }
+
+
+	 bool UpdateItem(int Index, int value)
+	 {
+		 Node* ItemNode = GetNode(Index);
+		 if (ItemNode != NULL)
+		 {
+			 ItemNode->Value = value;
+			 return true;
+		 }
+		 else
+		 {
+			 return false;
+		 }
+		 
+	 }
 };
 
